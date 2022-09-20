@@ -2,7 +2,9 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <div>
+            <small>&copy; Joyce Magistrado and Holden Prine. All rights reserved.</small>
+        </div>
     )
 }
 
