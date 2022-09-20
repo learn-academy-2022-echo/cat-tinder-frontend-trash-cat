@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import RacoonIndex from './pages/RacoonIndex'
+import RacoonShow from './pages/RacoonShow'
+import RacoonNew from './pages/RacoonNew'
+import RacoonEdit from './pages/RacoonEdit'
+import NotFound from './pages/NotFound'
+import { Routes, Route } from 'react-router-dom'
+import mockRacoon from './mockRacoon'
+import { useState } from 'react'
 
 function App() {
+  
+  const [racoon, setRacoon] = useState(mockRacoon)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+      <Routes>
+          <Route path ="/" element={<Home />} />
+          <Route path ="/racoonindex" element={<RacoonIndex />} />
+          <Route path ="/racoonshow"  element={<RacoonShow />} />
+          <Route path ="/racoonnew" element={<RacoonNew />} />
+          <Route path ="/racoonedit" element={<RacoonEdit />} />
+          <Route path ="/*" element={<NotFound />} />
+      </Routes>
+    <Footer />
+    </>
   );
 }
 
