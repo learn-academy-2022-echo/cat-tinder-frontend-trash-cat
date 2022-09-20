@@ -27,45 +27,43 @@ const Header = () => {
     const toggle = () => setIsOpen(!isOpen)
     
     return (
-        <>
-        <div>
+    <>
+      <div>
         <Navbar>
-        <NavbarBrand href="/">Home</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/racoonindex">All Raccoons</NavLink>
-            </NavItem>
-            
-            <NavItem>
-              <NavLink href="/racoonnew">Create a Profile!</NavLink>
-            </NavItem>
-            
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Profile
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                    <NavLink href="/racoonshow">
-                        View Profile
-                    </NavLink>
-                </DropdownItem>
-                <DropdownItem>
-                    <NavLink href="/racoonedit">
-                        Edit Profile
-                    </NavLink>
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-        </Collapse>
-      </Navbar>
-        </div>
-        </>
+          <NavbarBrand href="/">Home</NavbarBrand>
+            <NavbarToggler onClick={toggle} />
+              <Collapse isOpen={isOpen} navbar>
+            <Nav className="me-auto" navbar>
+              <NavItem>
+                <NavLink href="/racoonindex">All Raccoons</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/racoonnew">Create a Profile!</NavLink>
+              </NavItem>
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Profile
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                      <NavLink href="/racoonshow">
+                          View Profile
+                      </NavLink>
+                  </DropdownItem>
+                  <DropdownItem>
+                      <NavLink href="/racoonedit">
+                          Edit Profile
+                      </NavLink>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Reset</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    </>
     )
 }
 
