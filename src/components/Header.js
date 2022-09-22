@@ -44,7 +44,7 @@ const Header = () => {
                 <DropdownToggle nav caret>
                   Profile
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu end>
                   <DropdownItem>
                       <NavLink href="/racoonshow">
                           View Profile

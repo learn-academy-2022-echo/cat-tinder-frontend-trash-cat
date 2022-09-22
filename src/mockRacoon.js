@@ -1,10 +1,10 @@
-const mockRacoons = [
+const mockRacoon = [
     {
         id: 1,
         name: "Julius",
         age: 45,
         hobbies: "Loves To go to church, Ride dirt bikes, and Collect eggs",
-        img:'../assets/Julius.jpg',
+        img:'./assets/Julius.jpg',
         dislikes: "Dislikes Sinning, Rock Music, and Halloween"
     },
     {
@@ -12,7 +12,7 @@ const mockRacoons = [
         name: "Todd",
         age: 19,
         hobbies: "Loves to Eat, Sleep, and Pick flowers",
-        img:'../assets/Todd.jpg',
+        img:'./assets/Todd.jpg',
         dislikes: "Dislikes Conflict, Negativity, Having dirty paws"
     },
     {
@@ -20,7 +20,7 @@ const mockRacoons = [
         name: "Chardonnay",
         age: 29,
         hobbies: "Loves to Go Clubbing, Designer Shoes, and Buying lots of random shit on amazon",
-        img:'../assets/Chardonnay.png',
+        img:'./assets/Chardonnay.png',
         dislikes: "Dislikes Raccoons who don't pay for the first meal, Anyone looking for serious relationships, Gemini"
     },
     {
@@ -28,7 +28,7 @@ const mockRacoons = [
         name: "Big Pizza",
         age: 31,
         hobbies: "Loves to volunteer at the local animal shelter, go hiking, and Watch the Bee movie",
-        img:'../assets/BigPizza.png',
+        img:'./assets/BigPizza.png',
         dislikes: "Dislikes Pineapple on pizza, Astrology, Shitty Drivers"
     },
     {
@@ -44,7 +44,7 @@ const mockRacoons = [
         name: "Lil Sleepy",
         age: 25,
         hobbies: "Loves to make music, rap about being tired, and really into psychedelics",
-        img:'../assets/LilSleepy.png',
+        img:'./assets/LilSleepy.png',
         dislikes: "Dislikes When people don't check out his SoundCloud"
     },
     {
@@ -52,7 +52,9 @@ const mockRacoons = [
         name: "Shannon",
         age: 22,
         hobbies: "Loves Cosplay, Video games, and KPop",
-        img:'../assets/Shannon.png',
+        img:'./assets/Shannon.png',
         dislikes: "Dislikes When people talk shit about her bias, Spicy food, Hyper Masculine men (Joe Rogan/ Alex Jones enjoyers)"
     }
 ]
+
+export default mockRacoon

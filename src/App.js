@@ -14,15 +14,15 @@ import { useState } from 'react'
 
 function App() {
   
-  const [racoon, setRacoon] = useState(mockRacoon)
+  const [racoons, setRacoons] = useState(mockRacoon)
   
   return (
     <>
     <Header />
       <Routes>
           <Route path ="/" element={<Home />} />
-          <Route path ="/racoonindex" element={<RacoonIndex />} />
-          <Route path ="/racoonshow"  element={<RacoonShow />} />
+          <Route path ="/racoonindex" element={<RacoonIndex racoons = { racoons }/>} />
+          <Route path ="/racoonshow/:id"  element={<RacoonShow  racoons = { racoons }/>} />
           <Route path ="/racoonnew" element={<RacoonNew />} />
           <Route path ="/racoonedit" element={<RacoonEdit />} />
           <Route path ="/*" element={<NotFound />} />
