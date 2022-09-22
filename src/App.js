@@ -15,6 +15,10 @@ import { useState } from 'react'
 function App() {
   
   const [racoons, setRacoons] = useState(mockRacoon)
+
+  const createRacoon = (racoon) => {
+    console.log(racoon)
+  }
   
   return (
     <>
@@ -23,7 +27,7 @@ function App() {
           <Route path ="/" element={<Home />} />
           <Route path ="/racoonindex" element={<RacoonIndex racoons = { racoons }/>} />
           <Route path ="/racoonshow/:id"  element={<RacoonShow  racoons = { racoons }/>} />
-          <Route path ="/racoonnew" element={<RacoonNew />} />
+          <Route path ="/racoonnew" element={<RacoonNew createRacoon={createRacoon} />} />
           <Route path ="/racoonedit" element={<RacoonEdit />} />
           <Route path ="/*" element={<NotFound />} />
       </Routes>
