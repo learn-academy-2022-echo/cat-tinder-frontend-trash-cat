@@ -34,13 +34,13 @@ const RacoonNew = ({ createRacoon }) => {
                     <Label for="img">Share your face</Label>
                     <Input type="text" name="img" placeholder="Input URL" onChange={handleChange} value={newRacoon.img}/>
                 </FormGroup>
-                    <div>
-                        <NavLink to = "/racoonindex">
-                            <Button color="primary"  onClick={handleSubmit} name="submit">
+                <div>
+                    <NavLink to = "/racoonindex">
+                        <Button color="primary"  onClick{handleSubmit} name="submit">
                                 Click Me
-                            </Button>
-                        </NavLink>
-                    </div>
+                        </Button>
+                    </NavLink>
+                </div>
             </Form>
         </>
     )
