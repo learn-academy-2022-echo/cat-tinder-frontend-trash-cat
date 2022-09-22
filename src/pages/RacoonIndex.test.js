@@ -1,18 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import RacoonIndex from './RacoonIndex';
 import  mockRacoon from '../mockRacoon'
+import { BrowserRouter } from 'react-router-dom'
+
 
 describe("<RacoonIndex/>", () => {
     it("RacoonIndex renders without crashing", () => {
-        render(<RacoonIndex />)
-        expect(screen.getByText("All Raccoons")).toBeInTheDocument()
+        render(
+            <BrowserRouter>
+            <RacoonIndex racoons={mockRacoon}/>
+            </BrowserRouter>
+        )
+
+        mockRacoon.forEach(racoon => {
+        const RacoonName = screen.getByText(racoon.name)
+        expect(RacoonName).toBeInTheDocument()
     })
-   
-    it("renders raccoon cards", () => {
-        render(<RacoonIndex mockRacoon={mockRacoon} />)
-        mockRacoon.forEach((value) => {
-          const RacoonName = screen.getByText(value.name)
-          expect(RacoonName).toBeInTheDocument()
-        })
     })
 })

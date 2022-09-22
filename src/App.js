@@ -9,20 +9,20 @@ import RacoonNew from './pages/RacoonNew'
 import RacoonEdit from './pages/RacoonEdit'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from 'react-router-dom'
-import mockRacoonArray from './mockRacoon'
+import mockRacoon from './mockRacoon'
 import { useState } from 'react'
 
 function App() {
   
-  const [racoon, setRacoon] = useState(mockRacoonArray)
+  const [racoons, setRacoons] = useState(mockRacoon)
   
   return (
     <>
     <Header />
       <Routes>
           <Route path ="/" element={<Home />} />
-          <Route path ="/racoonindex" element={<RacoonIndex mockRacoon = { mockRacoonArray }/>} />
-          <Route path ="/racoonshow/:id"  element={<RacoonShow  mockRacoon = { mockRacoonArray }/>} />
+          <Route path ="/racoonindex" element={<RacoonIndex racoons = { racoons }/>} />
+          <Route path ="/racoonshow/:id"  element={<RacoonShow  racoons = { racoons }/>} />
           <Route path ="/racoonnew" element={<RacoonNew />} />
           <Route path ="/racoonedit" element={<RacoonEdit />} />
           <Route path ="/*" element={<NotFound />} />

@@ -1,12 +1,10 @@
 import React from 'react'
-import mockRacoonArray from '../mockRacoon'
 import { useParams } from 'react-router-dom'
 import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem } from 'reactstrap'
 
-const RacoonShow = ({mockRacoon}) => {
-    
+const RacoonShow = ({racoons}) => {
     const { id } = useParams()
-    let currentRacoonProfile = mockRacoon.find(value => value.id === +id)
+    let racoon = racoons.find(racoon => racoon.id === +id)
 
 
     return (
@@ -18,22 +16,22 @@ const RacoonShow = ({mockRacoon}) => {
             >
               <img
                 alt="Card"
-                src={currentRacoonProfile.img}
+                src={racoon.img}
               />
               <CardBody>
                 <CardTitle tag="h5">
-                  {currentRacoonProfile.name}
+                  {racoon.name}
                 </CardTitle>
                 <CardText>
-                  {currentRacoonProfile.age}
+                  {racoon.age}
                 </CardText>
               </CardBody>
               <ListGroup flush>
                 <ListGroupItem>
-                  {currentRacoonProfile.hobbies}
+                  {racoon.hobbies}
                 </ListGroupItem>
                 <ListGroupItem>
-                  {currentRacoonProfile.dislikes}
+                  {racoon.dislikes}
                 </ListGroupItem>
               </ListGroup>
         </Card>

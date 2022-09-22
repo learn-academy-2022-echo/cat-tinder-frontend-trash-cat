@@ -1,12 +1,10 @@
-import JuliusImage from './assets/Julius.jpg'
-
-const mockRacoonArray = [
+const mockRacoon = [
     {
         id: 1,
         name: "Julius",
         age: 45,
         hobbies: "Loves To go to church, Ride dirt bikes, and Collect eggs",
-        img:{JuliusImage},
+        img:'./assets/Julius.jpg',
         dislikes: "Dislikes Sinning, Rock Music, and Halloween"
     },
     {
@@ -59,4 +57,4 @@ const mockRacoonArray = [
     }
 ]
 
-export default mockRacoonArray
+export default mockRacoon

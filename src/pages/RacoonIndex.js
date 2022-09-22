@@ -2,14 +2,14 @@ import React from 'react'
 import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 
-const RacoonIndex = ({ mockRacoon }) => {
+const RacoonIndex = ({ racoons }) => {
   // console.log(mockRacoon)
   
   return (
     <>
     <div>
       <h1>All Raccoons</h1>
-      { mockRacoon?.map((value, index) => {
+      { racoons?.map((racoon, index) => {
         return (
           <>
               <Card
@@ -19,25 +19,25 @@ const RacoonIndex = ({ mockRacoon }) => {
                 >
                   <img
                     alt="Card"
-                    src={value.img}
+                    src={racoon.img}
                   />
                   <CardBody>
                     <CardTitle tag="h5">
-                      {value.name}
+                      {racoon.name}
                     </CardTitle>
                     <CardText>
-                      {value.age}
+                      {racoon.age}
                     </CardText>
                   </CardBody>
                   <ListGroup flush>
                     <ListGroupItem>
-                      {value.hobbies}
+                      {racoon.hobbies}
                     </ListGroupItem>
                     <ListGroupItem>
-                      {value.dislikes}
+                      {racoon.dislikes}
                     </ListGroupItem>
                     <ListGroupItem>
-                    <NavLink to = {`/racoonshow/${value.id}`}>
+                    <NavLink to = {`/racoonshow/${racoon.id}`}>
                       Check Me Out! 
                     </NavLink>
                     </ListGroupItem>

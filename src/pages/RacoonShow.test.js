@@ -7,7 +7,7 @@ const renderComponent = () => {
     render(
         <MemoryRouter initialEntries={["/racoonshow/1"]}>
         <Routes>
-            <Route path='racoonshow/:id' element={<RacoonShow racoons={mockRacoonArray} />}/>
+            <Route path='racoonshow/:id' element={<RacoonShow racoons={mockRacoon} />}/>
         </Routes>
         </MemoryRouter>
   )
@@ -16,6 +16,6 @@ const renderComponent = () => {
 describe("RacoonShow", () => {
     it("renders a card with a raccoon name", () => {
         renderComponent()
-        expect(screen.getByText(mockRacoonArray[0].name)).toBeInTheDocument()
+        expect(screen.getByText(mockRacoon[0].name)).toBeInTheDocument()
     })
 })
