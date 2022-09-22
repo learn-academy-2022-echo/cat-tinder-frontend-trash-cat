@@ -12,8 +12,7 @@ const RacoonIndex = ({ mockRacoon }) => {
       { mockRacoon?.map((value, index) => {
         return (
           <>
-          <NavLink to = {`/racoonshow/${value.id}`}>
-            <Card
+              <Card
                   style={{
                     width: '18rem'
                   }}
@@ -37,9 +36,13 @@ const RacoonIndex = ({ mockRacoon }) => {
                     <ListGroupItem>
                       {value.dislikes}
                     </ListGroupItem>
+                    <ListGroupItem>
+                    <NavLink to = {`/racoonshow/${value.id}`}>
+                      Check Me Out! 
+                    </NavLink>
+                    </ListGroupItem>
                   </ListGroup>
-            </Card>
-            </NavLink>
+              </Card>
           </>
         )
       })
