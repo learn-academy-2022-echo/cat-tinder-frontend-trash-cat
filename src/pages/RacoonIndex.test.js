@@ -8,7 +8,7 @@ describe("<RacoonIndex/>", () => {
     it("RacoonIndex renders without crashing", () => {
         render(
             <BrowserRouter>
-            <RacoonIndex racoons={mockRacoon}/>
+                <RacoonIndex racoons={mockRacoon}/>
             </BrowserRouter>
         )
 

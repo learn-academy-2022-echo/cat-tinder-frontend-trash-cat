@@ -6,9 +6,9 @@ import RacoonShow from './RacoonShow';
 const renderComponent = () => {
     render(
         <MemoryRouter initialEntries={["/racoonshow/1"]}>
-        <Routes>
-            <Route path='racoonshow/:id' element={<RacoonShow racoons={mockRacoon} />}/>
-        </Routes>
+            <Routes>
+                <Route path='racoonshow/:id' element={<RacoonShow racoons={mockRacoon} />}/>
+            </Routes>
         </MemoryRouter>
   )
 }
