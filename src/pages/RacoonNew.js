@@ -36,7 +36,7 @@ const RacoonNew = ({ createRacoon }) => {
                 </FormGroup>
                 <div>
                     <NavLink to = "/racoonindex">
-                        <Button color="primary"  onClick{handleSubmit} name="submit">
+                        <Button color="primary"  onClick={handleSubmit} name="submit">
                                 Click Me
                         </Button>
                     </NavLink>

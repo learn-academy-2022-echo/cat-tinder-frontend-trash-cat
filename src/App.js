@@ -10,14 +10,35 @@ import RacoonEdit from './pages/RacoonEdit'
 import NotFound from './pages/NotFound'
 import { Routes, Route } from 'react-router-dom'
 import mockRacoon from './mockRacoon'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
 
 function App() {
   
-  const [racoons, setRacoons] = useState(mockRacoon)
+  const [racoons, setRacoons] = useState([])
+
+  useEffect(()=>{
+    readRacoon()
+  }, [])
+
+  const readRacoon = () => {
+    fetch("http://localhost:3000/racoons")
+    .then(response => response.json())
+    .then(payload => {setRacoons(payload)})
+    .catch(error => console.log(error))
+  }
 
   const createRacoon = (racoon) => {
-    console.log(racoon)
+    fetch("http://localhost:3000/racoons", {
+      body: JSON.stringify(racoon),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "POST"
+    })
+    .then(response => response.json())
+    .then(payload => readRacoon(payload))
+    .catch(errors => console.log("Raccoon create errors:", errors))
   }
   
   return (
