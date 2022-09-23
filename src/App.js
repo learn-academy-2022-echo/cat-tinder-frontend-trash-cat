@@ -17,6 +17,11 @@ function App() {
   
   const [racoons, setRacoons] = useState([])
 
+  const updateRacoon = (racoon, id) => {
+    console.log("racoon:", racoon)
+    console.log("id:", id)
+  }
+
   useEffect(()=>{
     readRacoon()
   }, [])
@@ -49,7 +54,7 @@ function App() {
           <Route path ="/racoonindex" element={<RacoonIndex racoons = { racoons }/>} />
           <Route path ="/racoonshow/:id"  element={<RacoonShow  racoons = { racoons }/>} />
           <Route path ="/racoonnew" element={<RacoonNew createRacoon={createRacoon} />} />
-          <Route path ="/racoonedit" element={<RacoonEdit />} />
+          <Route path ="/racoonedit/:id" element={<RacoonEdit racoons={racoons} updateRacoon={updateRacoon} />} />
           <Route path ="/*" element={<NotFound />} />
       </Routes>
     <Footer />
