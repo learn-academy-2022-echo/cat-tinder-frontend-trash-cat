@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem } from 'reactstrap'
 
 const RacoonShow = ({racoons}) => {
@@ -33,6 +33,11 @@ const RacoonShow = ({racoons}) => {
                 <ListGroupItem>
                   {racoon.dislikes}
                 </ListGroupItem>
+                <ListGroupItem>
+              <NavLink to={`/racoonedit/${racoon.id}`} className="nav-link">
+                 Edit Raccoon Profile!
+              </NavLink>
+              </ListGroupItem>
               </ListGroup>
         </Card>
       </>
