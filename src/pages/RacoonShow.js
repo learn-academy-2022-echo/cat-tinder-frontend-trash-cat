@@ -33,11 +33,13 @@ const RacoonShow = ({racoons}) => {
                 <ListGroupItem>
                   {racoon.dislikes}
                 </ListGroupItem>
+                <ListGroupItem>
+              <NavLink to={`/racoonedit/${racoon.id}`} className="nav-link">
+                 Edit Raccoon Profile!
+              </NavLink>
+              </ListGroupItem>
               </ListGroup>
         </Card>
-        <NavLink to={`/racoonedit/${racoon.id}`} className="nav-link">
-  Edit Raccoon Profile
-</NavLink>
       </>
     )
 }
