@@ -10,11 +10,11 @@ const RacoonEdit = ({racoons, updateRacoon }) => {
   let currentRacoon = racoons?.find((racoon) => racoon.id === +id)
 
   const [editRacoon, setEditRacoon] = useState({
-    name: currentRacoon.name,
-    age: currentRacoon.age,
-    hobbies: currentRacoon.hobbies,
-    img: currentRacoon.img,
-    dislikes: currentRacoon.dislikes
+    name: "",
+    age: "",
+    hobbies: "",
+    img: "",
+    dislikes: ""
   })
   const handleChange = (e) => {
     setEditRacoon({...editRacoon, [e.target.name]: e.target.value})
