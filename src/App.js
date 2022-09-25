@@ -17,10 +17,10 @@ function App() {
   
   const [racoons, setRacoons] = useState([])
 
-  const updateRacoon = (racoon, id) => {
-    console.log("racoon:", racoon)
-    console.log("id:", id)
-  }
+  // const updateRacoon = (racoon, id) => {
+  //   console.log("racoon:", racoon)
+  //   console.log("id:", id)
+  // }
 
   useEffect(()=>{
     readRacoon()
@@ -45,6 +45,19 @@ function App() {
     .then(payload => readRacoon(payload))
     .catch(errors => console.log("Raccoon create errors:", errors))
   }
+
+  const updateRacoon = (racoon, id) => {
+    fetch(`http://localhost:3000/racoons/${id}`,{
+      body: JSON.stringify(racoon),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => response.json())
+    .then(payload => readRacoon(payload))
+    .catch(errors => console.log("Raccoon update errors: ", errors))
+}
   
   return (
     <>
