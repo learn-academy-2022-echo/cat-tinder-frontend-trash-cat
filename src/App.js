@@ -17,11 +17,6 @@ function App() {
   
   const [racoons, setRacoons] = useState([])
 
-  // const updateRacoon = (racoon, id) => {
-  //   console.log("racoon:", racoon)
-  //   console.log("id:", id)
-  // }
-
   useEffect(()=>{
     readRacoon()
   }, [])
