@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,16 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+:root {
+  --color-header-and-footer: rgb(217, 4, 41);
+  --color-bg: rgb(237, 242, 244);
+  --color-card: rgb(239, 35, 60);
 }
+
+.header {
+  color: var(--color-header-and-footer);
+}
+
+

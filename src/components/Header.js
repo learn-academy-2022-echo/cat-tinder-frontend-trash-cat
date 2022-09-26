@@ -13,6 +13,7 @@ import { Collapse,
         DropdownItem,
         NavbarText, 
 } from 'reactstrap'
+import './App.css'
 
 //Psuedo for Structure
 // 1. Need Home -> for home
@@ -28,8 +29,8 @@ const Header = () => {
     
     return (
     <>
-      <div>
-        <Navbar>
+      <div className='header'>
+        <Navbar className='header'>
           <NavbarBrand href="/">Home</NavbarBrand>
             <NavbarToggler onClick={toggle} />
               <Collapse isOpen={isOpen} navbar>
