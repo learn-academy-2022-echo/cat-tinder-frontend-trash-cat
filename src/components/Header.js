@@ -13,7 +13,7 @@ import { Collapse,
         DropdownItem,
         NavbarText, 
 } from 'reactstrap'
-import './App.css'
+import './Header.css'
 
 //Psuedo for Structure
 // 1. Need Home -> for home
@@ -41,25 +41,6 @@ const Header = () => {
               <NavItem>
                 <NavLink href="/racoonnew">Create a Profile!</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Profile
-                </DropdownToggle>
-                <DropdownMenu end>
-                  <DropdownItem>
-                      <NavLink href="/racoonshow">
-                          View Profile
-                      </NavLink>
-                  </DropdownItem>
-                  <DropdownItem>
-                      <NavLink href="/racoonedit">
-                          Edit Profile
-                      </NavLink>
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

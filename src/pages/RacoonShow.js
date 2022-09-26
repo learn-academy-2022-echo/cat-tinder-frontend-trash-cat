@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams, NavLink } from 'react-router-dom'
-import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem } from 'reactstrap'
+import { Card, CardBody, CardTitle, CardText, ListGroup, ListGroupItem, Button } from 'reactstrap'
+import './RacoonShow.css'
 
 const RacoonShow = ({racoons}) => {
     const { id } = useParams()
@@ -9,6 +10,7 @@ const RacoonShow = ({racoons}) => {
 
     return (
         <>
+        <div className="project_container">
         <Card
               style={{
                 width: '18rem'
@@ -16,9 +18,9 @@ const RacoonShow = ({racoons}) => {
             >
               <img
                 alt="Card"
-                src={racoon.img}
+                src={racoon.img} className="photo"
               />
-              <CardBody>
+              <CardBody className="name">
                 <CardTitle tag="h5">
                   {racoon.name}
                 </CardTitle>
@@ -26,20 +28,23 @@ const RacoonShow = ({racoons}) => {
                   {racoon.age}
                 </CardText>
               </CardBody>
-              <ListGroup flush>
-                <ListGroupItem>
+              <ListGroup flush >
+                <ListGroupItem className="list-group">
                   {racoon.hobbies}
                 </ListGroupItem>
-                <ListGroupItem>
+                <ListGroupItem className="list-group">
                   {racoon.dislikes}
                 </ListGroupItem>
-                <ListGroupItem>
+                <ListGroupItem className="button-link">
+                <Button color="dark">
               <NavLink to={`/racoonedit/${racoon.id}`} className="nav-link">
                  Edit Raccoon Profile!
               </NavLink>
+              </Button>
               </ListGroupItem>
               </ListGroup>
         </Card>
+      </div>
       </>
     )
 }

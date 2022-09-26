@@ -1,8 +1,9 @@
 import React from 'react'
+import './Footer.css'
 
 const Footer = () => {
     return (
-        <div><p>Trash Cat:Find Your Match</p>
+        <div className="footer"><p>Trash Cat: Find Your Match</p>
             <small>&copy; Joyce Magistrado and Holden Prine. All rights reserved.</small>
         </div>
     )

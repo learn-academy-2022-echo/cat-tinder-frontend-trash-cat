@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { useParams, useNavigate } from 'react-router-dom'
+import './RacoonEdit.css'
 
 
 
@@ -10,11 +11,11 @@ const RacoonEdit = ({racoons, updateRacoon }) => {
   let currentRacoon = racoons?.find((racoon) => racoon.id === +id)
 
   const [editRacoon, setEditRacoon] = useState({
-    name: "",
-    age: "",
-    hobbies: "",
-    img: "",
-    dislikes: ""
+    name: currentRacoon.name,
+    age: currentRacoon.age,
+    hobbies: currentRacoon.hobbies,
+    img: currentRacoon.img,
+    dislikes: currentRacoon.dislikes
   })
   const handleChange = (e) => {
     setEditRacoon({...editRacoon, [e.target.name]: e.target.value})
@@ -27,7 +28,8 @@ const RacoonEdit = ({racoons, updateRacoon }) => {
   
     return (
         <>
-        <div><h1>Edit Your Profile</h1></div>
+        <div className="title"><h1>Edit Your Profile</h1></div>
+        <div className="form">
         <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
@@ -40,11 +42,12 @@ const RacoonEdit = ({racoons, updateRacoon }) => {
                     <Input type="text" name="dislikes" placeholder="Enter Dislikes" onChange={handleChange} value={editRacoon.dislikes}/>
                     <Label for="img">Share your face</Label>
                     <Input type="text" name="img" placeholder="Input URL" onChange={handleChange} value={editRacoon.img}/>
-                    <Button onClick={handleSubmit} name="submit">
+                </FormGroup>
+                    <Button onClick={handleSubmit} name="submit" color="dark" className="bts">
                         Update Your Raccoon! 
                     </Button>
-                </FormGroup>
           </Form>
+          </div>
             </>
     )
 }

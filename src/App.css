@@ -37,14 +37,19 @@
   }
 } */
 
-:root {
+/* :root {
   --color-header-and-footer: rgb(217, 4, 41);
   --color-bg: rgb(237, 242, 244);
   --color-card: rgb(239, 35, 60);
-}
+} */
 
-.header {
+/* .header {
   color: var(--color-header-and-footer);
+} */
+
+
+.background {
+  background-color: #EDF2F4;
+  justify-content: center;
+  text-align: center;
 }
-
-

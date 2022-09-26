@@ -1,0 +1,39 @@
+.project_container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 100px;
+    grid-gap: 60px;
+}
+.name {
+    background-color:#D90429;
+    font-color: white;
+    
+    
+}
+
+.photo {
+    height: 287px;
+    width: 286px;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.list-group {
+    height: 260px;
+    justify-content: center;
+    color: white;
+}
+
+.title{
+    padding-top: 3rem;
+}
+
+.list-bg {
+   color: #D90429;
+}
+
+.nav{
+color: white;
+}
+

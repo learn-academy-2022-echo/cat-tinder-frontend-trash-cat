@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
+import './RacoonNew.css'
 
 const RacoonNew = ({ createRacoon }) => {
     const [newRacoon, setNewRacoon] = useState({
@@ -20,11 +21,12 @@ const RacoonNew = ({ createRacoon }) => {
 
     return (
         <>
-        <div><h1>Create Your Profile</h1></div>
+        <div className="title"><h1>Create Your Profile</h1></div>
+            <div className="form">
             <Form>
                 <FormGroup>
                     <Label for="name">Name</Label>
-                    <Input type="text" name="name" placeholder="Enter Name" onChange={handleChange} value={newRacoon.name}/>
+                    <Input type="text" name="name" placeholder="Enter Name" onChange={handleChange} value={newRacoon.name} className="text-box"/>
                     <Label for="age">Age</Label>
                     <Input type="text" name="age" placeholder="How Old You Be?" onChange={handleChange} value={newRacoon.age} />
                     <Label for="hobbies">Hobbies</Label>
@@ -36,12 +38,13 @@ const RacoonNew = ({ createRacoon }) => {
                 </FormGroup>
                 <div>
                     <NavLink to = "/racoonindex">
-                        <Button color="primary"  onClick={handleSubmit} name="submit">
+                        <Button color="dark"  onClick={handleSubmit} name="submit">
                                 Let's Find Love BABY!
                         </Button>
                     </NavLink>
                 </div>
             </Form>
+            </div>
         </>
     )
 }
